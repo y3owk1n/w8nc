@@ -11,19 +11,19 @@ Maybe a self hosted version of this would make me happier?
 
 ## Supported Features
 
-- Scheduled one off or cron based jobs
-- Resume and pause the jobs as you need
-- Allow retry if task failed
-- Allow forward specified headers
-- Request and response headers are saved in task for more information
+-   Scheduled one off or cron based jobs
+-   Resume and pause the jobs as you need
+-   Allow retry if task failed
+-   Allow forward specified headers
+-   Request and response headers are saved in task for more information
 
 ## Roadmap
 
-- Task management api
-- Allow auth and access token for api access
-- Convert into a monorepo
-- Dashboard console for admin
-- Dockerized the app for ease of self hosting
+-   Task management api
+-   Allow auth and access token for api access
+-   Dashboard console for admin
+-   Proper docs
+-   Dockerized the app for ease of self hosting
 
 ## Concept
 
@@ -37,21 +37,21 @@ The app has 2 important part, which is job and task. A job can be either `one of
 import axios from "axios";
 
 const options = {
-  method: "GET",
-  url: "https://domain-for-this-app.com/api/jobs",
-  headers: {
-    "Content-Type": "application/json",
-  },
+    method: "GET",
+    url: "https://domain-for-this-app.com/api/jobs",
+    headers: {
+        "Content-Type": "application/json",
+    },
 };
 
 axios
-  .request(options)
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.error(error);
-  });
+    .request(options)
+    .then(function (response) {
+        console.log(response.data);
+    })
+    .catch(function (error) {
+        console.error(error);
+    });
 ```
 
 ### Get single job
@@ -60,18 +60,18 @@ axios
 import axios from "axios";
 
 const options = {
-  method: "GET",
-  url: "http://domain-for-this-app.com/api/job/{jobID}",
+    method: "GET",
+    url: "http://domain-for-this-app.com/api/job/{jobID}",
 };
 
 axios
-  .request(options)
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.error(error);
-  });
+    .request(options)
+    .then(function (response) {
+        console.log(response.data);
+    })
+    .catch(function (error) {
+        console.error(error);
+    });
 ```
 
 ### Post a new job
@@ -84,25 +84,26 @@ There's 2 ways to post a job. You can either define the config with `cron` key a
 import axios from "axios";
 
 const options = {
-  method: "POST",
-  url: "https://domain-for-this-app.com/api/job",
-  headers: { "Content-Type": "application/json" },
-  data: {
-    config: { cron: "*/1 * * * *" }, // Any cron expression
-    retry: retryNumber, //eg. 3
-    url: "https://destination-url.com/api/whatever", // Destination url
-    data: { hello: "cron" },
-  },
+    method: "POST",
+    url: "https://domain-for-this-app.com/api/job",
+    headers: { "Content-Type": "application/json" },
+    data: {
+        config: { cron: "*/1 * * * *" }, // Any cron expression
+        retry: retryNumber, //eg. 3
+        url: "https://destination-url.com/api/whatever", // Destination url
+        data: { hello: "cron" }, // Any data to include when call to your api
+        headers: { "x-test": true }, // Forward any headers
+    },
 };
 
 axios
-  .request(options)
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.error(error);
-  });
+    .request(options)
+    .then(function (response) {
+        console.log(response.data);
+    })
+    .catch(function (error) {
+        console.error(error);
+    });
 ```
 
 #### Post as scheduled date (once)
@@ -113,25 +114,26 @@ The date object should be in UTC string.
 import axios from "axios";
 
 const options = {
-  method: "POST",
-  url: "https://domain-for-this-app.com/api/job",
-  headers: { "Content-Type": "application/json" },
-  data: {
-    config: { date: "2023-02-13T17:29:00.000Z" }, // Date string in UTC
-    retry: retryNumber, //eg. 3
-    url: "https://destination-url.com/api/whatever", // Destination url
-    data: { hello: "schedule" },
-  },
+    method: "POST",
+    url: "https://domain-for-this-app.com/api/job",
+    headers: { "Content-Type": "application/json" },
+    data: {
+        config: { date: "2023-02-13T17:29:00.000Z" }, // Date string in UTC
+        retry: retryNumber, //eg. 3
+        url: "https://destination-url.com/api/whatever", // Destination url
+        data: { hello: "schedule" }, // Any data to include when call to your api
+        headers: { "x-test": true }, // Forward any headers
+    },
 };
 
 axios
-  .request(options)
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.error(error);
-  });
+    .request(options)
+    .then(function (response) {
+        console.log(response.data);
+    })
+    .catch(function (error) {
+        console.error(error);
+    });
 ```
 
 ### Pause a job
@@ -142,18 +144,18 @@ To pause a job, the job status has to be `pending`
 import axios from "axios";
 
 const options = {
-  method: "PUT",
-  url: "https://domain-for-this-app.com/api/job/{jobID}/pause",
+    method: "PUT",
+    url: "https://domain-for-this-app.com/api/job/{jobID}/pause",
 };
 
 axios
-  .request(options)
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.error(error);
-  });
+    .request(options)
+    .then(function (response) {
+        console.log(response.data);
+    })
+    .catch(function (error) {
+        console.error(error);
+    });
 ```
 
 ### Resume a job
@@ -164,16 +166,16 @@ To resume a job, the job status has to be `inactive`.
 import axios from "axios";
 
 const options = {
-  method: "PUT",
-  url: "http://domain-for-this-app.com/api/job/{jobID}/resume",
+    method: "PUT",
+    url: "http://domain-for-this-app.com/api/job/{jobID}/resume",
 };
 
 axios
-  .request(options)
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.error(error);
-  });
+    .request(options)
+    .then(function (response) {
+        console.log(response.data);
+    })
+    .catch(function (error) {
+        console.error(error);
+    });
 ```

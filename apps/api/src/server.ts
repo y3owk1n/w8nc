@@ -7,8 +7,7 @@ import { routes } from "./routes";
 
 export const createServer = () => {
     const app = express();
-    app
-        .disable("x-powered-by")
+    app.disable("x-powered-by")
         .use(morgan("combined"))
         .use(helmet())
         .use(urlencoded({ extended: true }))

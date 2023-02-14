@@ -146,7 +146,8 @@ async function schedule() {
             {
                 retries: retry || 3,
                 onFailedAttempt: (error) => {
-                    if (error.retriesLeft === 0) throw new Error("No more retries left");
+                    if (error.retriesLeft === 0)
+                        throw new Error("No more retries left");
                     log(
                         `Attempt ${error.attemptNumber} failed. There are ${error.retriesLeft} retries left.`
                     );
