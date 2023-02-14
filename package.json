@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "turbo run build",
+    "clean": "turbo run clean",
     "db:migrate:deploy": "turbo run db:migrate:deploy",
     "db:push": "turbo run db:push",
     "db:seed": "turbo run db:seed",
@@ -19,9 +20,12 @@
     "lint": "turbo run lint"
   },
   "devDependencies": {
-    "prettier": "^2.5.1",
-    "tsx": "^3.7.1",
-    "turbo": "latest"
+    "prettier": "^2.8.4",
+    "tsx": "^3.12.3",
+    "turbo": "^1.7.4"
   },
-  "packageManager": "yarn@1.22.17"
+  "packageManager": "yarn@3.4.1",
+  "dependencies": {
+    "@ladjs/graceful": "^3.2.1"
+  }
 }

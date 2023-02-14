@@ -24,16 +24,16 @@
     "studio": "prisma studio"
   },
   "dependencies": {
-    "@prisma/client": "^3.10.0"
+    "@prisma/client": "^4.10.1"
   },
   "devDependencies": {
     "config": "*",
-    "eslint": "^8.12.0",
-    "prisma": "^3.10.0",
-    "rimraf": "^3.0.2",
+    "eslint": "^8.34.0",
+    "prisma": "^4.10.1",
+    "rimraf": "^4.1.2",
     "tsconfig": "*",
-    "tsup": "^5.11.13",
-    "tsx": "^3.7.1",
-    "typescript": "^4.5.5"
+    "tsup": "^6.6.3",
+    "tsx": "^3.12.3",
+    "typescript": "^4.9.5"
   }
 }
