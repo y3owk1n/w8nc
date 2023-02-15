@@ -27,7 +27,7 @@ const graceful = new Graceful({ brees: [bree] });
 graceful.listen();
 
 export async function startBree() {
-    log("starting Bree...");
+    log("Getting all pending jobs");
     // Requeue all jobs from the database on server restart
     const jobs = await client.job.findMany({
         where: {
@@ -57,7 +57,7 @@ export async function startBree() {
         path: path.join(
             path.dirname(fileURLToPath(import.meta.url)),
             "jobs",
-            `schedule.${process.env.TS_NODE ? "ts" : "js"}`
+            `schedule.js`
         ),
 
         ...parseConfig({ date: job.date, cron: job.cron }),
@@ -66,11 +66,21 @@ export async function startBree() {
         },
     }));
 
-    const addedJobs = await bree.add(breeJobs);
+    log(`Found ${breeJobs.length} job(s) that are pending`);
 
-    await bree.start();
+    try {
+        await bree.add(breeJobs);
 
-    log(`Requeued with ${breeJobs.length} job(s)`);
+        log(`Added ${breeJobs.length} job(s) to queue`);
+
+        log(`Start bree...`);
+
+        await bree.start();
+    } catch (error) {
+        log("Fail to start bree");
+        log({ error });
+    }
+    return;
 }
 
 export const addBreeJob = async ({
@@ -91,7 +101,7 @@ export const addBreeJob = async ({
         path: path.join(
             path.dirname(fileURLToPath(import.meta.url)),
             "jobs",
-            `${jobFileName}.${process.env.TS_NODE ? "ts" : "js"}`
+            `${jobFileName}.js}`
         ),
         ...parseConfig({
             date: date,
