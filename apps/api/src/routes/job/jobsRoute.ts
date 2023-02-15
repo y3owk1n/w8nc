@@ -1,4 +1,4 @@
-import { client } from "database";
+import { client } from "@w8nc/database";
 import express from "express";
 
 export const jobsRoute = express.Router();

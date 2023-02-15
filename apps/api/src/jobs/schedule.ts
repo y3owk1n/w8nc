@@ -4,7 +4,7 @@ import type { AxiosError, AxiosHeaders, AxiosResponseHeaders } from "axios";
 import axios from "axios";
 import type { Job, JobType, Prisma } from "@prisma/client";
 import pRetry, { AbortError } from "p-retry";
-import { client } from "database";
+import { client } from "@w8nc/database";
 import { log } from "node:console";
 import { parseConfig } from "../lib/parseConfig";
 import { getJobType } from "../lib/getJobType";

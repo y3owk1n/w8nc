@@ -673,6 +673,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/strip-bom@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@types/strip-bom@npm:3.0.0"
+  checksum: cb165d0c2ce6abbef95506ebee25be02bd453600ef1792dc1754236e5d6f9c830d52bdb85978d0b08ea1f36b96a61235ac5ad99e0f4c2767fb4ea004e141d2df
+  languageName: node
+  linkType: hard
+
+"@types/strip-json-comments@npm:0.0.30":
+  version: 0.0.30
+  resolution: "@types/strip-json-comments@npm:0.0.30"
+  checksum: 829ddd389645073f347c5b1924a8c34b8813af29756576e511c46f40e218193cf93ccbade62661d47fc70f707e98f410331729b8c20edfcb2e807d51df1ad4b7
+  languageName: node
+  linkType: hard
+
 "@types/superagent@npm:*":
   version: 4.1.16
   resolution: "@types/superagent@npm:4.1.16"
@@ -813,6 +827,126 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@w8nc/api@workspace:apps/api":
+  version: 0.0.0-use.local
+  resolution: "@w8nc/api@workspace:apps/api"
+  dependencies:
+    "@hapi/boom": ^10.0.1
+    "@types/body-parser": ^1.19.2
+    "@types/cors": ^2.8.13
+    "@types/express": ^4.17.17
+    "@types/morgan": ^1.9.4
+    "@types/node": ^18.13.0
+    "@types/supertest": ^2.0.12
+    axios: ^1.3.3
+    body-parser: ^1.20.1
+    bree: ^9.1.3
+    config: "*"
+    cors: ^2.8.5
+    cron-validate: ^1.4.5
+    database: "*"
+    dayjs: ^1.11.7
+    esbuild: ^0.17.8
+    esbuild-register: ^3.4.2
+    eslint: ^8.34.0
+    express: ^4.18.2
+    helmet: ^6.0.1
+    logger: "*"
+    morgan: ^1.10.0
+    nodemon: ^2.0.20
+    p-retry: ^5.1.2
+    supertest: ^6.3.3
+    tsconfig: "*"
+    tsup: ^6.6.3
+    typescript: ^4.9.5
+    zod: ^3.20.6
+  languageName: unknown
+  linkType: soft
+
+"@w8nc/config@workspace:packages/config":
+  version: 0.0.0-use.local
+  resolution: "@w8nc/config@workspace:packages/config"
+  dependencies:
+    "@typescript-eslint/eslint-plugin": ^5.52.0
+    eslint: ^8.34.0
+    eslint-config-next: ^13.1.6
+    eslint-config-prettier: ^8.6.0
+    eslint-config-turbo: ^0.0.7
+    eslint-plugin-react: 7.32.2
+    typescript: ^4.9.5
+  languageName: unknown
+  linkType: soft
+
+"@w8nc/console@workspace:apps/console":
+  version: 0.0.0-use.local
+  resolution: "@w8nc/console@workspace:apps/console"
+  dependencies:
+    "@types/node": ^18.13.0
+    "@types/react": ^18.0.28
+    "@types/react-dom": ^18.0.11
+    config: "*"
+    database: "*"
+    eslint: ^8.34.0
+    next: ^13.1.6
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    tsconfig: "*"
+    typescript: ^4.9.5
+  languageName: unknown
+  linkType: soft
+
+"@w8nc/database@workspace:packages/database":
+  version: 0.0.0-use.local
+  resolution: "@w8nc/database@workspace:packages/database"
+  dependencies:
+    "@prisma/client": ^4.10.1
+    config: "*"
+    eslint: ^8.34.0
+    prisma: ^4.10.1
+    rimraf: ^4.1.2
+    tsconfig: "*"
+    tsup: ^6.6.3
+    tsx: ^3.12.3
+    typescript: ^4.9.5
+  languageName: unknown
+  linkType: soft
+
+"@w8nc/logger@workspace:packages/logger":
+  version: 0.0.0-use.local
+  resolution: "@w8nc/logger@workspace:packages/logger"
+  dependencies:
+    config: "*"
+    eslint: ^8.34.0
+    tsconfig: "*"
+    tsup: ^6.6.3
+    typescript: ^4.9.5
+  languageName: unknown
+  linkType: soft
+
+"@w8nc/tsconfig@workspace:packages/tsconfig":
+  version: 0.0.0-use.local
+  resolution: "@w8nc/tsconfig@workspace:packages/tsconfig"
+  languageName: unknown
+  linkType: soft
+
+"@w8nc/www@workspace:apps/www":
+  version: 0.0.0-use.local
+  resolution: "@w8nc/www@workspace:apps/www"
+  dependencies:
+    "@types/node": ^18.13.0
+    "@types/react": ^18.0.28
+    "@types/react-dom": ^18.0.11
+    config: "*"
+    database: "*"
+    eslint: ^8.34.0
+    next: ^13.1.6
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    tsconfig: "*"
+    typescript: ^4.9.5
+  languageName: unknown
+  linkType: soft
+
 "abbrev@npm:1, abbrev@npm:^1.0.0":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -922,42 +1056,6 @@ __metadata:
   checksum: 3e044fd6d1d26545f235a9fe4d7a534e2029d8e59fa7fd9f2a6eb21230f6b5380ea1eaf55136e60cbf8e613544b3b766e7a6fa2102e2a3a117505466e3025dc2
   languageName: node
   linkType: hard
-
-"api@workspace:apps/api":
-  version: 0.0.0-use.local
-  resolution: "api@workspace:apps/api"
-  dependencies:
-    "@hapi/boom": ^10.0.1
-    "@types/body-parser": ^1.19.2
-    "@types/cors": ^2.8.13
-    "@types/express": ^4.17.17
-    "@types/morgan": ^1.9.4
-    "@types/node": ^18.13.0
-    "@types/supertest": ^2.0.12
-    axios: ^1.3.3
-    body-parser: ^1.20.1
-    bree: ^9.1.3
-    config: "*"
-    cors: ^2.8.5
-    cron-validate: ^1.4.5
-    database: "*"
-    dayjs: ^1.11.7
-    esbuild: ^0.17.8
-    esbuild-register: ^3.4.2
-    eslint: ^8.34.0
-    express: ^4.18.2
-    helmet: ^6.0.1
-    logger: "*"
-    morgan: ^1.10.0
-    nodemon: ^2.0.20
-    p-retry: ^5.1.2
-    supertest: ^6.3.3
-    tsconfig: "*"
-    tsup: ^6.6.3
-    typescript: ^4.9.5
-    zod: ^3.20.6
-  languageName: unknown
-  linkType: soft
 
 "aproba@npm:^1.0.3 || ^2.0.0":
   version: 2.0.0
@@ -1404,19 +1502,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"config@*, config@workspace:packages/config":
-  version: 0.0.0-use.local
-  resolution: "config@workspace:packages/config"
+"config@npm:*":
+  version: 3.3.9
+  resolution: "config@npm:3.3.9"
   dependencies:
-    "@typescript-eslint/eslint-plugin": ^5.52.0
-    eslint: ^8.34.0
-    eslint-config-next: ^13.1.6
-    eslint-config-prettier: ^8.6.0
-    eslint-config-turbo: ^0.0.7
-    eslint-plugin-react: 7.32.2
-    typescript: ^4.9.5
-  languageName: unknown
-  linkType: soft
+    json5: ^2.2.3
+  checksum: 2c29e40be22274462769670a4b69fcbcad2d3049eb15030073e410d32c892ef29e0c879a3d68ef92ddd572c516e4f65a11bb6458f680a44ceb0f051bcd3d97ff
+  languageName: node
+  linkType: hard
 
 "console-control-strings@npm:^1.1.0":
   version: 1.1.0
@@ -1513,21 +1606,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"database@*, database@workspace:packages/database":
-  version: 0.0.0-use.local
-  resolution: "database@workspace:packages/database"
-  dependencies:
-    "@prisma/client": ^4.10.1
-    config: "*"
-    eslint: ^8.34.0
-    prisma: ^4.10.1
-    rimraf: ^4.1.2
-    tsconfig: "*"
-    tsup: ^6.6.3
-    tsx: ^3.12.3
-    typescript: ^4.9.5
-  languageName: unknown
-  linkType: soft
+"database@npm:*":
+  version: 0.0.2
+  resolution: "database@npm:0.0.2"
+  checksum: 1dc5c9616bcb6ef0a390ce7b3ab7c25afe9a50dfa442e2fea474378f7be14f03461bc51034f24efa74ed165d9a8ea8fd00533816576c8beca28c898130c9faac
+  languageName: node
+  linkType: hard
 
 "dayjs@npm:^1.11.7":
   version: 1.11.7
@@ -3383,6 +3467,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"json5@npm:^2.2.3":
+  version: 2.2.3
+  resolution: "json5@npm:2.2.3"
+  bin:
+    json5: lib/cli.js
+  checksum: 2a7436a93393830bce797d4626275152e37e877b265e94ca69c99e3d20c2b9dab021279146a39cdb700e71b2dd32a4cebd1514cd57cee102b1af906ce5040349
+  languageName: node
+  linkType: hard
+
 "jsx-ast-utils@npm:^2.4.1 || ^3.0.0, jsx-ast-utils@npm:^3.3.3":
   version: 3.3.3
   resolution: "jsx-ast-utils@npm:3.3.3"
@@ -3543,17 +3636,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"logger@*, logger@workspace:packages/logger":
-  version: 0.0.0-use.local
-  resolution: "logger@workspace:packages/logger"
-  dependencies:
-    config: "*"
-    eslint: ^8.34.0
-    tsconfig: "*"
-    tsup: ^6.6.3
-    typescript: ^4.9.5
-  languageName: unknown
-  linkType: soft
+"logger@npm:*":
+  version: 0.0.1
+  resolution: "logger@npm:0.0.1"
+  checksum: de4ef953523d393b4bc85621229309f365fdc2777fb670ebbdbdb70e2f65fff4a755c5be0429979b77d29cc99d365a3b48e635f8077ea93999b891d75012436b
+  languageName: node
+  linkType: hard
 
 "loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
@@ -5081,6 +5169,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"strip-json-comments@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "strip-json-comments@npm:2.0.1"
+  checksum: 1074ccb63270d32ca28edfb0a281c96b94dc679077828135141f27d52a5a398ef5e78bcf22809d23cadc2b81dfbe345eb5fd8699b385c8b1128907dec4a7d1e1
+  languageName: node
+  linkType: hard
+
 "strip-json-comments@npm:^3.1.0, strip-json-comments@npm:^3.1.1":
   version: 3.1.1
   resolution: "strip-json-comments@npm:3.1.1"
@@ -5311,11 +5406,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsconfig@*, tsconfig@workspace:packages/tsconfig":
-  version: 0.0.0-use.local
-  resolution: "tsconfig@workspace:packages/tsconfig"
-  languageName: unknown
-  linkType: soft
+"tsconfig@npm:*":
+  version: 7.0.0
+  resolution: "tsconfig@npm:7.0.0"
+  dependencies:
+    "@types/strip-bom": ^3.0.0
+    "@types/strip-json-comments": 0.0.30
+    strip-bom: ^3.0.0
+    strip-json-comments: ^2.0.0
+  checksum: 8bce05e93c673defd56d93d83d4055e49651d3947c076339c4bc15d47b7eb5029bed194087e568764213a2e4bf45c477ba9f4da16adfd92cd901af7c09e4517e
+  languageName: node
+  linkType: hard
 
 "tslib@npm:^1.8.1":
   version: 1.14.1
@@ -5596,24 +5697,6 @@ __metadata:
   checksum: ae0123222c6df65b437669d63dfa8c36cee20a504101b2fcd97b8bf76f91259c17f9f2b4d70a1e3c6bbcee7f51b28392833adb6b2770b23b01abec84e369660b
   languageName: node
   linkType: hard
-
-"web@workspace:apps/web":
-  version: 0.0.0-use.local
-  resolution: "web@workspace:apps/web"
-  dependencies:
-    "@types/node": ^18.13.0
-    "@types/react": ^18.0.28
-    "@types/react-dom": ^18.0.11
-    config: "*"
-    database: "*"
-    eslint: ^8.34.0
-    next: ^13.1.6
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    tsconfig: "*"
-    typescript: ^4.9.5
-  languageName: unknown
-  linkType: soft
 
 "webidl-conversions@npm:^4.0.2":
   version: 4.0.2

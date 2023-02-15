@@ -1,6 +1,6 @@
 import { createServer } from "./server";
 import { startBree } from "./bree";
-import { log } from "logger";
+import { log } from "@w8nc/logger";
 
 const port = process.env.PORT || 8000;
 const server = createServer();

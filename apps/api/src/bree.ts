@@ -5,8 +5,8 @@ import dayjs from "dayjs";
 import * as path from "node:path";
 import * as process from "node:process";
 import { fileURLToPath } from "node:url";
-import { client } from "database";
-import { log } from "logger";
+import { client } from "@w8nc/database";
+import { log } from "@w8nc/logger";
 import { parseConfig } from "./lib/parseConfig";
 
 // const { Signale } = pkg;

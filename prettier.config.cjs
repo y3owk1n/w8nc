@@ -1,14 +1,1 @@
-/** @type {import("prettier").Config} */
-module.exports = {
-    trailingComma: "es5",
-    tabWidth: 4,
-    semi: true,
-    singleQuote: false,
-    bracketSpacing: true,
-    bracketSameLine: true,
-    jsxSingleQuote: false,
-    printWidth: 80,
-    arrowParens: "always",
-    singleAttributePerLine: true,
-    plugins: [],
-};
+module.exports = require("./packages/config/prettier-preset.js");

@@ -1,10 +1,10 @@
 import express from "express";
 import { getJobType } from "../../lib/getJobType";
 import { zParse } from "../../lib/zParse";
-import { client } from "database";
+import { client } from "@w8nc/database";
 import { jobIdSchema, jobSchema } from "../../schema/job";
 import { addBreeJob, bree } from "../../bree";
-import { log } from "logger";
+import { log } from "@w8nc/logger";
 
 export const jobRoute = express.Router();
 
