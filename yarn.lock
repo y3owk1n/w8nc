@@ -730,7 +730,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.42.0":
+"@typescript-eslint/parser@npm:^5.42.0, @typescript-eslint/parser@npm:^5.52.0":
   version: 5.52.0
   resolution: "@typescript-eslint/parser@npm:5.52.0"
   dependencies:
@@ -869,6 +869,7 @@ __metadata:
   resolution: "@w8nc/config@workspace:packages/config"
   dependencies:
     "@typescript-eslint/eslint-plugin": ^5.52.0
+    "@typescript-eslint/parser": ^5.52.0
     eslint: ^8.34.0
     eslint-config-next: ^13.1.6
     eslint-config-prettier: ^8.6.0

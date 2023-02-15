@@ -2,7 +2,7 @@
     "name": "@w8nc/logger",
     "version": "0.0.0",
     "private": true,
-    "main": "./dist/index.js",
+    "main": "./dist/index.mjs",
     "source": "./src/index.ts",
     "types": "./dist/index.d.ts",
     "files": [
@@ -11,7 +11,6 @@
     "scripts": {
         "build": "tsup",
         "clean": "rm -rf dist",
-        "dev": "tsup --watch",
         "lint": "TIMING=1 eslint \"src/**/*.ts*\""
     },
     "devDependencies": {

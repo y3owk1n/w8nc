@@ -2,7 +2,7 @@
     "name": "@w8nc/database",
     "version": "1.0.0",
     "license": "MIT",
-    "main": "./dist/index.js",
+    "main": "./dist/index.mjs",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
     "files": [
@@ -15,7 +15,6 @@
         "db:migrate:dev": "prisma migrate dev",
         "db:push": "prisma db push",
         "db:seed": "tsx src/seed.ts",
-        "dev": "tsup --watch",
         "format": "prisma format",
         "generate": "prisma generate",
         "lint": "TIMING=1 eslint \"src/**/*.ts\"",

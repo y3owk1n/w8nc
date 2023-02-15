@@ -9,6 +9,15 @@
         "PORT"
     ],
     "pipeline": {
+        "@w8nc/api#build": {
+            "dependsOn": [
+                "@w8nc/database#build",
+                "@w8nc/logger#build"
+            ],
+            "outputs": [
+                "dist/**"
+            ]
+        },
         "@w8nc/database#build": {
             "outputs": [
                 "dist/**"
@@ -26,9 +35,6 @@
         },
         "build": {
             "dependsOn": [
-                "@w8nc/database#build",
-                "@w8nc/logger#build",
-                "@w8nc/ui#build",
                 "^build"
             ],
             "outputs": [
@@ -41,8 +47,13 @@
         "db:push": {},
         "db:seed": {},
         "dev": {
-            "cache": false,
-            "persistent": true
+            "dependsOn": [
+                "@w8nc/database#build",
+                "@w8nc/logger#build",
+                "@w8nc/ui#build",
+                "@w8nc/api#build"
+            ],
+            "cache": false
         },
         "generate": {
             "dependsOn": [

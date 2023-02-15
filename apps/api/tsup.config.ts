@@ -12,5 +12,6 @@ export default defineConfig((options: Options) => ({
     format: ["esm"],
     minify: isProduction,
     sourcemap: true,
+    external: ["@w8nc/logger", "@w8nc/database"],
     ...options,
 }));
