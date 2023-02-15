@@ -11,15 +11,19 @@
     "dependencies": {
         "next": "^13.1.6",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "ui": "*"
     },
     "devDependencies": {
         "@types/node": "^18.13.0",
         "@types/react": "^18.0.28",
         "@types/react-dom": "^18.0.11",
+        "autoprefixer": "^10.4.13",
         "config": "*",
         "database": "*",
         "eslint": "^8.34.0",
+        "postcss": "^8.4.21",
+        "tailwindcss": "^3.2.6",
         "tsconfig": "*",
         "typescript": "^4.9.5"
     }
