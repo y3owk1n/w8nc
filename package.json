@@ -24,8 +24,5 @@
         "tsx": "^3.12.3",
         "turbo": "^1.7.4"
     },
-    "packageManager": "yarn@3.4.1",
-    "dependencies": {
-        "@ladjs/graceful": "^3.2.1"
-    }
+    "packageManager": "yarn@3.4.1"
 }

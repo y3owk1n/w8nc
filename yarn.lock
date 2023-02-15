@@ -832,6 +832,7 @@ __metadata:
   resolution: "@w8nc/api@workspace:apps/api"
   dependencies:
     "@hapi/boom": ^10.0.1
+    "@ladjs/graceful": ^3.2.1
     "@types/body-parser": ^1.19.2
     "@types/cors": ^2.8.13
     "@types/express": ^4.17.17
@@ -959,14 +960,18 @@ __metadata:
     "@types/node": ^18.13.0
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
+    autoprefixer: ^10.4.13
     config: "*"
     database: "*"
     eslint: ^8.34.0
     next: ^13.1.6
+    postcss: ^8.4.21
     react: ^18.2.0
     react-dom: ^18.2.0
+    tailwindcss: ^3.2.6
     tsconfig: "*"
     typescript: ^4.9.5
+    ui: "*"
   languageName: unknown
   linkType: soft
 
@@ -5063,7 +5068,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@ladjs/graceful": ^3.2.1
     prettier: ^2.8.4
     tsx: ^3.12.3
     turbo: ^1.7.4
