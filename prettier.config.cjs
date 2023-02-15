@@ -1,1 +1,1 @@
-module.exports = require("./packages/config/prettier-preset.cjs");
+module.exports = require("@w8nc/config/prettier-preset.cjs");

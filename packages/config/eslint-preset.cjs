@@ -28,9 +28,4 @@ module.exports = {
         "react/jsx-key": "off",
         "@typescript-eslint/consistent-type-imports": "warn",
     },
-    parserOptions: {
-        babelOptions: {
-            presets: [require.resolve("next/babel")],
-        },
-    },
 };

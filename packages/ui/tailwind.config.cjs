@@ -1,10 +1,10 @@
-const { join } = require('path');
-const colors = require("tailwindcss/colors")
+const { join } = require("path");
+const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     prefix: "ui-",
-    content: [join(__dirname, 'src/**/*.{js,ts,jsx,tsx}')],
+    content: [join(__dirname, "src/**/*.{js,ts,jsx,tsx}")],
     theme: {
         extend: {
             colors: {
