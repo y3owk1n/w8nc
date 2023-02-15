@@ -1,0 +1,25 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "globalDependencies": ["**/.env.*local"],
+    "globalEnv": ["TS_NODE", "NODE_ENV", "PORT"],
+    "pipeline": {
+        "build": {
+            "dependsOn": ["^build"],
+            "outputs": ["dist/**", ".next/**", "public/dist/**"]
+        },
+        "db:migrate:deploy": {},
+        "db:push": {},
+        "db:seed": {},
+        "dev": {
+            "cache": false,
+            "persistent": true
+        },
+        "generate": {
+            "dependsOn": ["^generate"]
+        },
+        "lint": {},
+        "clean": {
+            "cache": false
+        }
+    }
+}

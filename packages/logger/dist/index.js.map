@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.ts"],"sourcesContent":["export const log = (str: any) => {\n    console.log(\"logger: \" + str);\n};\n"],"mappings":";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,IAAM,MAAM,CAAC,QAAa;AAC7B,UAAQ,IAAI,aAAa,GAAG;AAChC;","names":[]}

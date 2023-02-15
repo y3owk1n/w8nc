@@ -1,0 +1,5 @@
+{
+    "extends": "@w8nc/tsconfig/react-library.json",
+    "include": ["*"],
+    "exclude": ["dist", "build", "node_modules"]
+}
