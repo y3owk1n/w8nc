@@ -1,4 +1,4 @@
-import { routes } from './chunk-UBMBNFIM.js';
+import { routes } from './chunk-7PJ5ZCCZ.js';
 import bodyParser from 'body-parser';
 import express from 'express';
 import morgan from 'morgan';
@@ -20,4 +20,4 @@ var createServer = () => {
 
 export { createServer };
 //# sourceMappingURL=out.js.map
-//# sourceMappingURL=chunk-SJPKXOLB.js.map
+//# sourceMappingURL=chunk-EBDWWG77.js.map

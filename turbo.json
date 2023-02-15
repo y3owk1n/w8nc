@@ -50,8 +50,7 @@
             "dependsOn": [
                 "@w8nc/database#build",
                 "@w8nc/logger#build",
-                "@w8nc/ui#build",
-                "@w8nc/api#build"
+                "@w8nc/ui#build"
             ],
             "cache": false
         },

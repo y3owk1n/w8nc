@@ -12,9 +12,9 @@
     "scripts": {
         "build": "tsup",
         "clean": "rm -rf dist",
-        "dev": "TS_NODE=true nodemon ./dist/index.js",
+        "dev": "TS_NODE=true tsup --watch --onSuccess 'node ./dist/index.js'",
         "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
-        "start": "node -r esbuild-register ./src/index.ts"
+        "start": "node -r ./dist/index.js"
     },
     "dependencies": {
         "@hapi/boom": "^10.0.1",

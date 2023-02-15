@@ -1,4 +1,4 @@
-import { jobRoute } from './chunk-QZKY3LT4.js';
+import { jobRoute } from './chunk-XCWHEJKC.js';
 import { jobsRoute } from './chunk-Q4XMHGFZ.js';
 import express from 'express';
 
@@ -8,4 +8,4 @@ routes.use("/job", jobRoute);
 
 export { routes };
 //# sourceMappingURL=out.js.map
-//# sourceMappingURL=chunk-UBMBNFIM.js.map
+//# sourceMappingURL=chunk-7PJ5ZCCZ.js.map
