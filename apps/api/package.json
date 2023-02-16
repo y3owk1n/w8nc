@@ -2,8 +2,8 @@
     "name": "@w8nc/api",
     "version": "0.0.0",
     "private": true,
-    "main": "./dist/index.mjs",
-    "module": "./dist/index.mjs",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
     "type": "module",
     "types": "./dist/index.d.ts",
     "files": [
@@ -14,7 +14,7 @@
         "clean": "rm -rf dist",
         "dev": "TS_NODE=true tsup --watch --onSuccess 'node ./dist/index.js'",
         "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
-        "start": "node -r ./dist/index.js"
+        "start": "node  ./dist/index.js"
     },
     "dependencies": {
         "@hapi/boom": "^10.0.1",

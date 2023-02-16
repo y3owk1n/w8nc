@@ -10,6 +10,7 @@
     },
     "scripts": {
         "build": "turbo run build",
+        "start": "turbo run start",
         "clean": "turbo run clean",
         "db:migrate:deploy": "turbo run db:migrate:deploy",
         "db:push": "turbo run db:push",
