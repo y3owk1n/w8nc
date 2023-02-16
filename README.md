@@ -1,7 +1,7 @@
 For the time being, I named this as **w8nc**, which means `wait and see`. Simple http request to queue anything you want, just queue, wait and see.
 
 > Everything is still work in progress. Welcome to contribute.
-> This is totally not ready yet to be used, in fact it doesn't even have a start script yet 🤦🏻
+> This is totally not ready yet to be used!
 
 ## Motivation
 
