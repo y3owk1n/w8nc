@@ -499,6 +499,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@trpc/server@npm:^10.11.1":
+  version: 10.11.1
+  resolution: "@trpc/server@npm:10.11.1"
+  checksum: 337ed1e6b4a5550eb0659c891d21688e26ceb124d9cb9046bdc4590b37187a2558e121e911e736120a9a7356ed6ae1c7f738770a8a8620107cc291f9be90ba63
+  languageName: node
+  linkType: hard
+
 "@types/body-parser@npm:*, @types/body-parser@npm:^1.19.2":
   version: 1.19.2
   resolution: "@types/body-parser@npm:1.19.2"
@@ -666,20 +673,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/strip-bom@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@types/strip-bom@npm:3.0.0"
-  checksum: cb165d0c2ce6abbef95506ebee25be02bd453600ef1792dc1754236e5d6f9c830d52bdb85978d0b08ea1f36b96a61235ac5ad99e0f4c2767fb4ea004e141d2df
-  languageName: node
-  linkType: hard
-
-"@types/strip-json-comments@npm:0.0.30":
-  version: 0.0.30
-  resolution: "@types/strip-json-comments@npm:0.0.30"
-  checksum: 829ddd389645073f347c5b1924a8c34b8813af29756576e511c46f40e218193cf93ccbade62661d47fc70f707e98f410331729b8c20edfcb2e807d51df1ad4b7
-  languageName: node
-  linkType: hard
-
 "@typescript-eslint/eslint-plugin@npm:^5.52.0":
   version: 5.52.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.52.0"
@@ -812,29 +805,30 @@ __metadata:
     "@types/express": ^4.17.17
     "@types/morgan": ^1.9.4
     "@types/node": ^18.13.0
+    "@w8nc/config": "*"
+    "@w8nc/database": "*"
+    "@w8nc/logger": "*"
+    "@w8nc/trpc": "*"
+    "@w8nc/tsconfig": "*"
     axios: ^1.3.3
     body-parser: ^1.20.1
     bree: ^9.1.3
-    config: "*"
     cors: ^2.8.5
     cron-validate: ^1.4.5
-    database: "*"
     dayjs: ^1.11.7
     eslint: ^8.34.0
     express: ^4.18.2
     helmet: ^6.0.1
-    logger: "*"
     morgan: ^1.10.0
     nodemon: ^2.0.20
     p-retry: ^5.1.2
-    tsconfig: "*"
     tsup: ^6.6.3
     typescript: ^4.9.5
     zod: ^3.20.6
   languageName: unknown
   linkType: soft
 
-"@w8nc/config@workspace:packages/config":
+"@w8nc/config@*, @w8nc/config@workspace:packages/config":
   version: 0.0.0-use.local
   resolution: "@w8nc/config@workspace:packages/config"
   dependencies:
@@ -845,7 +839,7 @@ __metadata:
     eslint-config-prettier: ^8.6.0
     eslint-config-turbo: ^0.0.7
     eslint-plugin-react: 7.32.2
-    tailwindcss: ^3.2.6
+    tailwindcss: ^3.2.7
     typescript: ^4.9.5
   languageName: unknown
   linkType: soft
@@ -857,66 +851,80 @@ __metadata:
     "@types/node": ^18.13.0
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
+    "@w8nc/config": "*"
+    "@w8nc/tsconfig": "*"
+    "@w8nc/ui": "*"
     autoprefixer: ^10.4.13
-    config: "*"
-    database: "*"
     eslint: ^8.34.0
     next: ^13.1.6
     postcss: ^8.4.21
     react: ^18.2.0
     react-dom: ^18.2.0
-    tailwindcss: ^3.2.6
-    tsconfig: "*"
+    tailwindcss: ^3.2.7
     typescript: ^4.9.5
-    ui: "*"
   languageName: unknown
   linkType: soft
 
-"@w8nc/database@workspace:packages/database":
+"@w8nc/database@*, @w8nc/database@workspace:packages/database":
   version: 0.0.0-use.local
   resolution: "@w8nc/database@workspace:packages/database"
   dependencies:
     "@prisma/client": ^4.10.1
-    config: "*"
+    "@w8nc/config": "*"
+    "@w8nc/tsconfig": "*"
     eslint: ^8.34.0
     prisma: ^4.10.1
     rimraf: ^4.1.2
-    tsconfig: "*"
     tsup: ^6.6.3
     tsx: ^3.12.3
     typescript: ^4.9.5
   languageName: unknown
   linkType: soft
 
-"@w8nc/logger@workspace:packages/logger":
+"@w8nc/logger@*, @w8nc/logger@workspace:packages/logger":
   version: 0.0.0-use.local
   resolution: "@w8nc/logger@workspace:packages/logger"
   dependencies:
-    config: "*"
+    "@w8nc/config": "*"
+    "@w8nc/tsconfig": "*"
     eslint: ^8.34.0
-    tsconfig: "*"
     tsup: ^6.6.3
     typescript: ^4.9.5
   languageName: unknown
   linkType: soft
 
-"@w8nc/tsconfig@workspace:packages/tsconfig":
+"@w8nc/trpc@*, @w8nc/trpc@workspace:packages/trpc":
+  version: 0.0.0-use.local
+  resolution: "@w8nc/trpc@workspace:packages/trpc"
+  dependencies:
+    "@trpc/server": ^10.11.1
+    "@w8nc/config": "*"
+    "@w8nc/tsconfig": "*"
+    eslint: ^8.34.0
+    superjson: ^1.12.2
+    tsup: ^6.6.3
+    typescript: ^4.9.5
+    zod: ^3.20.6
+  languageName: unknown
+  linkType: soft
+
+"@w8nc/tsconfig@*, @w8nc/tsconfig@workspace:packages/tsconfig":
   version: 0.0.0-use.local
   resolution: "@w8nc/tsconfig@workspace:packages/tsconfig"
   languageName: unknown
   linkType: soft
 
-"@w8nc/ui@workspace:packages/ui":
+"@w8nc/ui@*, @w8nc/ui@workspace:packages/ui":
   version: 0.0.0-use.local
   resolution: "@w8nc/ui@workspace:packages/ui"
   dependencies:
     "@types/react": ^18.0.28
+    "@w8nc/config": "*"
+    "@w8nc/tsconfig": "*"
     autoprefixer: ^10.4.13
-    config: "*"
     eslint: ^8.34.0
     postcss: ^8.4.21
     react: ^18.2.0
-    tsconfig: "*"
     tsup: ^6.6.3
     typescript: ^4.9.5
   peerDependencies:
@@ -931,18 +939,17 @@ __metadata:
     "@types/node": ^18.13.0
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
+    "@w8nc/config": "*"
+    "@w8nc/tsconfig": "*"
+    "@w8nc/ui": "*"
     autoprefixer: ^10.4.13
-    config: "*"
-    database: "*"
     eslint: ^8.34.0
     next: ^13.1.6
     postcss: ^8.4.21
     react: ^18.2.0
     react-dom: ^18.2.0
-    tailwindcss: ^3.2.6
-    tsconfig: "*"
+    tailwindcss: ^3.2.7
     typescript: ^4.9.5
-    ui: "*"
   languageName: unknown
   linkType: soft
 
@@ -1560,15 +1567,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"config@npm:*":
-  version: 3.3.9
-  resolution: "config@npm:3.3.9"
-  dependencies:
-    json5: ^2.2.3
-  checksum: 2c29e40be22274462769670a4b69fcbcad2d3049eb15030073e410d32c892ef29e0c879a3d68ef92ddd572c516e4f65a11bb6458f680a44ceb0f051bcd3d97ff
-  languageName: node
-  linkType: hard
-
 "console-control-strings@npm:^1.1.0":
   version: 1.1.0
   resolution: "console-control-strings@npm:1.1.0"
@@ -1603,6 +1601,15 @@ __metadata:
   version: 0.5.0
   resolution: "cookie@npm:0.5.0"
   checksum: 1f4bd2ca5765f8c9689a7e8954183f5332139eb72b6ff783d8947032ec1fdf43109852c178e21a953a30c0dd42257828185be01b49d1eb1a67fd054ca588a180
+  languageName: node
+  linkType: hard
+
+"copy-anything@npm:^3.0.2":
+  version: 3.0.3
+  resolution: "copy-anything@npm:3.0.3"
+  dependencies:
+    is-what: ^4.1.8
+  checksum: d456dc5ec98dee7c7cf87d809eac30dc2ac942acd4cf970fab394e280ceb6dd7a8a7a5a44fcbcc50e0206658de3cc20b92863562f5797930bb2619f164f4c182
   languageName: node
   linkType: hard
 
@@ -1663,13 +1670,6 @@ __metadata:
   version: 1.0.8
   resolution: "damerau-levenshtein@npm:1.0.8"
   checksum: d240b7757544460ae0586a341a53110ab0a61126570ef2d8c731e3eab3f0cb6e488e2609e6a69b46727635de49be20b071688698744417ff1b6c1d7ccd03e0de
-  languageName: node
-  linkType: hard
-
-"database@npm:*":
-  version: 0.0.2
-  resolution: "database@npm:0.0.2"
-  checksum: 1dc5c9616bcb6ef0a390ce7b3ab7c25afe9a50dfa442e2fea474378f7be14f03461bc51034f24efa74ed165d9a8ea8fd00533816576c8beca28c898130c9faac
   languageName: node
   linkType: hard
 
@@ -3455,6 +3455,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-what@npm:^4.1.8":
+  version: 4.1.8
+  resolution: "is-what@npm:4.1.8"
+  checksum: b9bec3acff102d14ad467f4c74c9886af310fa160e07a63292c8c181e6768c7c4c1054644e13d67185b963644e4a513bce8c6b8ce3d3ca6f9488a69fccad5f97
+  languageName: node
+  linkType: hard
+
 "is-wsl@npm:^2.2.0":
   version: 2.2.0
   resolution: "is-wsl@npm:2.2.0"
@@ -3532,15 +3539,6 @@ __metadata:
   bin:
     json5: lib/cli.js
   checksum: 866458a8c58a95a49bef3adba929c625e82532bcff1fe93f01d29cb02cac7c3fe1f4b79951b7792c2da9de0b32871a8401a6e3c5b36778ad852bf5b8a61165d7
-  languageName: node
-  linkType: hard
-
-"json5@npm:^2.2.3":
-  version: 2.2.3
-  resolution: "json5@npm:2.2.3"
-  bin:
-    json5: lib/cli.js
-  checksum: 2a7436a93393830bce797d4626275152e37e877b265e94ca69c99e3d20c2b9dab021279146a39cdb700e71b2dd32a4cebd1514cd57cee102b1af906ce5040349
   languageName: node
   linkType: hard
 
@@ -3701,13 +3699,6 @@ __metadata:
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
-  languageName: node
-  linkType: hard
-
-"logger@npm:*":
-  version: 0.0.1
-  resolution: "logger@npm:0.0.1"
-  checksum: de4ef953523d393b4bc85621229309f365fdc2777fb670ebbdbdb70e2f65fff4a755c5be0429979b77d29cc99d365a3b48e635f8077ea93999b891d75012436b
   languageName: node
   linkType: hard
 
@@ -5244,13 +5235,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"std@npm:0.1.x":
-  version: 0.1.40
-  resolution: "std@npm:0.1.40"
-  checksum: ecc79c56d9793d67f8ea2c1d61ea6e3ed1673e157610236ea549d1337f2cb3da4e99a184ed2dcd151524fd079b2387f49bc95d0e6cc5a9f65349d37bea72e370
-  languageName: node
-  linkType: hard
-
 "stop-iteration-iterator@npm:^1.0.0":
   version: 1.0.0
   resolution: "stop-iteration-iterator@npm:1.0.0"
@@ -5341,13 +5325,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strip-json-comments@npm:^2.0.0":
-  version: 2.0.1
-  resolution: "strip-json-comments@npm:2.0.1"
-  checksum: 1074ccb63270d32ca28edfb0a281c96b94dc679077828135141f27d52a5a398ef5e78bcf22809d23cadc2b81dfbe345eb5fd8699b385c8b1128907dec4a7d1e1
-  languageName: node
-  linkType: hard
-
 "strip-json-comments@npm:^3.1.0, strip-json-comments@npm:^3.1.1":
   version: 3.1.1
   resolution: "strip-json-comments@npm:3.1.1"
@@ -5388,6 +5365,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"superjson@npm:^1.12.2":
+  version: 1.12.2
+  resolution: "superjson@npm:1.12.2"
+  dependencies:
+    copy-anything: ^3.0.2
+  checksum: cf7735e172811ed87476a7c2f1bb0e83725a0e3c2d7a50a71303a973060b3c710288767fb767a7a7eee8e5625d3ccaee1176a93e27f43841627512c15c4cdf84
+  languageName: node
+  linkType: hard
+
 "supports-color@npm:^5.5.0":
   version: 5.5.0
   resolution: "supports-color@npm:5.5.0"
@@ -5423,9 +5409,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.2.6":
-  version: 3.2.6
-  resolution: "tailwindcss@npm:3.2.6"
+"tailwindcss@npm:^3.2.7":
+  version: 3.2.7
+  resolution: "tailwindcss@npm:3.2.7"
   dependencies:
     arg: ^5.0.2
     chokidar: ^3.5.3
@@ -5455,7 +5441,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 908451ff7b334b2aec2a0ba5bf426a786a3f190b440a1f8ede206d889448ffda3b77349829f06dc297336fd0b5edc696ae5f23b808d6444bb5c689f218e95323
+  checksum: 819446bf67acea1fc738f345d80f328b7bb6e6ef4b24070249a11219307045881cf97baed6258cbdcede7fa18886e9c9c41fd0fa087b3e987cf2948560a2f164
   languageName: node
   linkType: hard
 
@@ -5583,18 +5569,6 @@ __metadata:
     minimist: ^1.2.6
     strip-bom: ^3.0.0
   checksum: 8afa01c673ebb4782ba53d3a12df97fa837ce524f8ad38ee4e2b2fd57f5ac79abc21c574e9e9eb014d93efe7fe8214001b96233b5c6ea75bd1ea82afe17a4c6d
-  languageName: node
-  linkType: hard
-
-"tsconfig@npm:*":
-  version: 7.0.0
-  resolution: "tsconfig@npm:7.0.0"
-  dependencies:
-    "@types/strip-bom": ^3.0.0
-    "@types/strip-json-comments": 0.0.30
-    strip-bom: ^3.0.0
-    strip-json-comments: ^2.0.0
-  checksum: 8bce05e93c673defd56d93d83d4055e49651d3947c076339c4bc15d47b7eb5029bed194087e568764213a2e4bf45c477ba9f4da16adfd92cd901af7c09e4517e
   languageName: node
   linkType: hard
 
@@ -5801,15 +5775,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: ab417a2f398380c90a6cf5a5f74badd17866adf57f1165617d6a551f059c3ba0a3e4da0d147b3ac5681db9ac76a303c5876394b13b3de75fdd5b1eaa06181c9d
-  languageName: node
-  linkType: hard
-
-"ui@npm:*":
-  version: 0.2.4
-  resolution: "ui@npm:0.2.4"
-  dependencies:
-    std: 0.1.x
-  checksum: c79eafb255ab5fd2ed83cf898cc98bd5379ee1ae77576b9a1e52ff70fbfdc276d8084719e6071f2448269bcd6f24468971b376c87d0ae48348dd60fcffd60e12
   languageName: node
   linkType: hard
 

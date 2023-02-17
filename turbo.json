@@ -1,33 +1,69 @@
 {
     "$schema": "https://turbo.build/schema.json",
-    "globalDependencies": ["**/.env.*local"],
-    "globalEnv": ["TS_NODE", "NODE_ENV", "PORT"],
+    "globalDependencies": [
+        "**/.env.*local"
+    ],
+    "globalEnv": [
+        "TS_NODE",
+        "NODE_ENV",
+        "PORT"
+    ],
     "pipeline": {
         "@w8nc/api#build": {
-            "dependsOn": ["@w8nc/database#build", "@w8nc/logger#build"],
-            "outputs": ["dist/**"]
+            "dependsOn": [
+                "@w8nc/database#build",
+                "@w8nc/logger#build",
+                "@w8nc/trpc#build"
+            ],
+            "outputs": [
+                "dist/**"
+            ]
+        },
+        "@w8nc/trpc#build": {
+            "dependsOn": [
+                "@w8nc/database#build",
+                "@w8nc/logger#build"
+            ],
+            "outputs": [
+                "dist/**"
+            ]
         },
         "@w8nc/database#build": {
-            "outputs": ["dist/**"]
+            "outputs": [
+                "dist/**"
+            ]
         },
         "@w8nc/logger#build": {
-            "outputs": ["dist/**"]
+            "outputs": [
+                "dist/**"
+            ]
         },
         "@w8nc/ui#build": {
-            "outputs": ["dist/**"]
+            "outputs": [
+                "dist/**"
+            ]
         },
         "build": {
-            "dependsOn": ["^build"],
-            "outputs": ["dist/**", ".next/**", "public/dist/**"]
+            "dependsOn": [
+                "^build"
+            ],
+            "outputs": [
+                "dist/**",
+                ".next/**",
+                "public/dist/**"
+            ]
         },
         "start": {
-            "dependsOn": ["^build"]
+            "dependsOn": [
+                "^build"
+            ]
         },
         "db:migrate:deploy": {},
         "db:push": {},
         "db:seed": {},
         "dev": {
             "dependsOn": [
+                "@w8nc/trpc#build",
                 "@w8nc/database#build",
                 "@w8nc/logger#build",
                 "@w8nc/ui#build"
@@ -35,7 +71,9 @@
             "cache": false
         },
         "generate": {
-            "dependsOn": ["^generate"]
+            "dependsOn": [
+                "^generate"
+            ]
         },
         "lint": {},
         "clean": {
