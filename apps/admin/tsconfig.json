@@ -1,9 +1,14 @@
 {
-  "exclude": ["node_modules"],
-  "extends": "tsconfig/vite.json",
-  "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "dist"
-  },
-  "include": ["src"]
+    "exclude": [
+        "node_modules"
+    ],
+    "extends": "@w8nc/tsconfig/nextjs.json",
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "dist"
+    },
+    "include": [
+        "src",
+        "next-env.d.ts"
+    ]
 }

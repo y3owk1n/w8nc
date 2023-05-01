@@ -1,12 +1,9 @@
 {
-    "name": "@w8nc/eslint-config-custom-server",
+    "name": "@w8nc/prettier-config-custom",
     "version": "0.0.0",
     "private": true,
     "license": "MIT",
     "main": "index.js",
-    "dependencies": {
-        "eslint-config-turbo": "latest"
-    },
     "publishConfig": {
         "access": "public"
     }
