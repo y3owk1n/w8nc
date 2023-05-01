@@ -1604,6 +1604,7 @@ __metadata:
     "@types/morgan": ^1.9.4
     "@types/node": ^18.16.3
     "@types/supertest": ^2.0.12
+    "@w8nc/database": "*"
     "@w8nc/eslint-config-custom-server": "*"
     "@w8nc/jest-presets": "*"
     "@w8nc/logger": "*"
@@ -1623,7 +1624,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@w8nc/database@workspace:packages/database":
+"@w8nc/database@*, @w8nc/database@workspace:packages/database":
   version: 0.0.0-use.local
   resolution: "@w8nc/database@workspace:packages/database"
   dependencies:
