@@ -12,5 +12,9 @@
     "prettier": "^2.7.1",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@7.15.0"
+  "packageManager": "yarn@3.4.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
