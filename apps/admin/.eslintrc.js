@@ -1,4 +1,4 @@
 module.exports = {
-  root: true,
-  extends: ["custom"],
+    root: true,
+    extends: ["@w8nc/eslint-config-custom"],
 };
