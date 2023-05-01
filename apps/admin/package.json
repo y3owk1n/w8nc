@@ -12,18 +12,18 @@
     "dependencies": {
         "@w8nc/logger": "*",
         "@w8nc/ui": "*",
-        "next": "latest",
+        "next": "^13.3.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
     "devDependencies": {
-        "@types/jest": "^26.0.22",
-        "@types/node": "^17.0.12",
+        "@types/jest": "^29.5.1",
+        "@types/node": "^18.16.3",
         "@types/react": "^18.2.0",
-        "@types/react-dom": "^18.2.0",
+        "@types/react-dom": "^18.2.1",
         "@w8nc/eslint-config-custom": "*",
         "@w8nc/prettier-config-custom": "*",
         "@w8nc/tsconfig": "*",
-        "typescript": "^4.8.3"
+        "typescript": "^5.0.4"
     }
 }
