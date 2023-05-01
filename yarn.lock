@@ -983,6 +983,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ladjs/graceful@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "@ladjs/graceful@npm:3.2.2"
+  dependencies:
+    lil-http-terminator: ^1.2.2
+    p-is-promise: 3
+  checksum: 874f83cf0ec6398f6346762c88daaba359a2f38f575252443922ef1fb531acb5f68750fb656835f8a20d62ae80b0e1d36c7f814d2bcfe2a3f252f229751ef423
+  languageName: node
+  linkType: hard
+
 "@next/env@npm:13.3.4":
   version: 13.3.4
   resolution: "@next/env@npm:13.3.4"
@@ -1203,6 +1213,13 @@ __metadata:
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
   checksum: ad87447820dd3f24825d2d947ebc03072b20a42bfc96cbafec16bff8bbda6c1a81fcb0be56d5b21968560c5359a0af4038a68ba150c3e1694fe4c109a063bed8
+  languageName: node
+  linkType: hard
+
+"@trpc/server@npm:^10.23.0":
+  version: 10.23.0
+  resolution: "@trpc/server@npm:10.23.0"
+  checksum: 4736ec890e1904730eb7498d27845291bebdbdb5395699d309f140ad0ef58e93dead4def72d101318124d95d999e62bcee98543ff6869554732e73f7da685b94
   languageName: node
   linkType: hard
 
@@ -1597,6 +1614,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@w8nc/api@workspace:apps/api"
   dependencies:
+    "@ladjs/graceful": ^3.2.2
+    "@trpc/server": ^10.23.0
     "@types/body-parser": ^1.19.2
     "@types/cors": ^2.8.13
     "@types/express": ^4.17.17
@@ -1616,11 +1635,13 @@ __metadata:
     dayjs: ^1.11.7
     eslint: ^8.39.0
     express: ^4.18.2
+    helmet: ^6.1.5
     jest: ^29.5.0
     morgan: ^1.10.0
     supertest: ^6.3.3
     tsup: ^6.7.0
     typescript: ^5.0.4
+    zod: ^3.21.4
   languageName: unknown
   linkType: soft
 
@@ -4053,6 +4074,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"helmet@npm:^6.1.5":
+  version: 6.1.5
+  resolution: "helmet@npm:6.1.5"
+  checksum: 58cc8f8715e2c486f3c7a58f89fcda3c9e83ab427bfe16d8486d8be53a681afc291f9900b9e60e5d42c63c25ece3da864a33cdd621a12f5a67cbc9046cff393d
+  languageName: node
+  linkType: hard
+
 "hexoid@npm:^1.0.0":
   version: 1.0.0
   resolution: "hexoid@npm:1.0.0"
@@ -5221,6 +5249,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lil-http-terminator@npm:^1.2.2":
+  version: 1.2.3
+  resolution: "lil-http-terminator@npm:1.2.3"
+  checksum: d270fbb60556c3151f4259c22c1346e39adf2f80c4030ec62bfc73deef5d7fc386fa1104e3816467e5166e44c5cfa10b64f0191bb86d86cf4b874baeb6c1823b
+  languageName: node
+  linkType: hard
+
 "lilconfig@npm:^2.0.5":
   version: 2.1.0
   resolution: "lilconfig@npm:2.1.0"
@@ -6032,6 +6067,13 @@ __metadata:
   version: 1.0.0
   resolution: "p-finally@npm:1.0.0"
   checksum: 93a654c53dc805dd5b5891bab16eb0ea46db8f66c4bfd99336ae929323b1af2b70a8b0654f8f1eae924b2b73d037031366d645f1fd18b3d30cbd15950cc4b1d4
+  languageName: node
+  linkType: hard
+
+"p-is-promise@npm:3":
+  version: 3.0.0
+  resolution: "p-is-promise@npm:3.0.0"
+  checksum: 74e511225fde5eeda7a120d51c60c284de90d68dec7c73611e7e59e8d1c44cc7e2246686544515849149b74ed0571ad470a456ac0d00314f8d03d2cc1ad43aae
   languageName: node
   linkType: hard
 
@@ -7833,5 +7875,12 @@ __metadata:
     property-expr: ^2.0.4
     toposort: ^2.0.2
   checksum: 3f33850913a237fb7e59b0b5c71d2cc6bdb1d6b2b01fc24c53ec68b35ad2b95cd49f735532117136495cb57f0ec58f0a7e1f1c55fad685555c7114155170f1ea
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.21.4":
+  version: 3.21.4
+  resolution: "zod@npm:3.21.4"
+  checksum: f185ba87342ff16f7a06686767c2b2a7af41110c7edf7c1974095d8db7a73792696bcb4a00853de0d2edeb34a5b2ea6a55871bc864227dace682a0a28de33e1f
   languageName: node
   linkType: hard
