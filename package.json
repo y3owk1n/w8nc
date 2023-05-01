@@ -1,20 +1,28 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "clean": "turbo run clean",
-    "dev": "turbo run dev --no-cache  --continue",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "lint": "turbo run lint",
-    "test": "turbo run test"
-  },
-  "devDependencies": {
-    "prettier": "^2.8.8",
-    "turbo": "^1.9.3"
-  },
-  "packageManager": "yarn@3.4.1",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+    "private": true,
+    "prisma": {
+        "schema": "packages/database/prisma/schema.prisma"
+    },
+    "scripts": {
+        "build": "turbo run build",
+        "db:migrate:deploy": "turbo run db:migrate:deploy",
+        "db:push": "turbo run db:push",
+        "db:seed": "turbo run db:seed",
+        "clean": "turbo run clean",
+        "dev": "turbo run dev --concurrency=11 --no-cache  --continue",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "generate": "turbo run generate",
+        "lint": "turbo run lint",
+        "test": "turbo run test"
+    },
+    "devDependencies": {
+        "prettier": "^2.8.8",
+        "tsx": "^3.12.7",
+        "turbo": "^1.9.3"
+    },
+    "packageManager": "yarn@3.4.1",
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ]
 }

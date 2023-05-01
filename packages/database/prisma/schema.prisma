@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model Job {
+    id        String    @id @default(cuid())
+    url       String
+    type      JobType
+    date      DateTime?
+    cron      String?
+    data      Json
+    retry     Int?
+    headers   Json?
+    task      Task[]
+    status    JobStatus @default(PENDING)
+    createdAt DateTime  @default(now())
+    updatedAt DateTime  @updatedAt
+
+    @@index([id, url, type, date, cron, data, retry, headers, status, createdAt, updatedAt])
+}
+
+model Task {
+    id         String     @id @default(cuid())
+    url        String
+    data       Json
+    reqHeaders Json
+    resHeaders Json
+    resStatus  Int
+    resMethod  String
+    status     TaskStatus
+    jobId      String
+    job        Job        @relation(fields: [jobId], references: [id], onDelete: Cascade)
+    createdAt  DateTime   @default(now())
+    updatedAt  DateTime   @updatedAt
+
+    @@index([id, url, data, reqHeaders, resHeaders, resStatus, resMethod, status, createdAt, updatedAt])
+}
+
+enum JobType {
+    CRON
+    SCHEDULE
+}
+
+enum JobStatus {
+    PENDING
+    INACTIVE
+    SUCCESS
+}
+
+enum TaskStatus {
+    SUCCESS
+    FAILED
+}

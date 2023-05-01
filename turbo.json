@@ -1,33 +1,55 @@
 {
-  "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
-  "globalEnv": ["PORT"],
-  "pipeline": {
-    "build": {
-      "outputs": [
-        "dist/**",
-        ".next/**",
-        "!.next/cache/**",
-        "build/**",
-        "api/**",
-        "public/build/**"
-      ],
-      "dependsOn": ["^build"]
-    },
-    "test": {
-      "outputs": ["coverage/**"],
-      "dependsOn": []
-    },
-    "lint": {
-      "dependsOn": ["^build"]
-    },
-    "dev": {
-      "dependsOn": ["^build"],
-      "cache": false,
-      "persistent": true
-    },
-    "clean": {
-      "cache": false
+    "$schema": "https://turbo.build/schema.json",
+    "globalDependencies": [
+        "**/.env.*local"
+    ],
+    "globalEnv": [
+        "PORT",
+        "NODE_ENV",
+        "DATABASE_URL"
+    ],
+    "pipeline": {
+        "build": {
+            "outputs": [
+                "dist/**",
+                ".next/**",
+                "!.next/cache/**",
+                "build/**",
+                "api/**",
+                "public/build/**"
+            ],
+            "dependsOn": [
+                "^build"
+            ]
+        },
+        "db:migrate:deploy": {},
+        "db:push": {},
+        "db:seed": {},
+        "test": {
+            "outputs": [
+                "coverage/**"
+            ],
+            "dependsOn": []
+        },
+        "lint": {
+            "dependsOn": [
+                "^build"
+            ]
+        },
+        "dev": {
+            "dependsOn": [
+                "^build"
+            ],
+            "cache": false,
+            "persistent": true
+        },
+        "generate": {
+            "dependsOn": [
+                "^generate"
+            ]
+        },
+        "clean": {
+            "cache": false
+        }
     }
-  }
 }
