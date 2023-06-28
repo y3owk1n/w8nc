@@ -6,7 +6,7 @@
     "scripts": {
         "build": "tsup src/index.ts --format cjs",
         "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-        "dev": "tsup src/index.ts --format cjs --watch --onSuccess \"node dist/index.js\"",
+        "dev": "tsup src/index.ts --format esm --watch --onSuccess \"node dist/index.esm\"",
         "lint": "tsc --noEmit && eslint \"src/**/*.ts*\"",
         "start": "node dist/index.js",
         "test": "jest --detectOpenHandles"
@@ -18,6 +18,7 @@
         "@ladjs/graceful": "^3.2.2",
         "@trpc/server": "^10.23.0",
         "@w8nc/logger": "*",
+        "@w8nc/trpc": "*",
         "body-parser": "^1.20.2",
         "bree": "^9.1.3",
         "cors": "^2.8.5",

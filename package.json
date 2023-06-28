@@ -9,7 +9,7 @@
         "db:push": "turbo run db:push",
         "db:seed": "turbo run db:seed",
         "clean": "turbo run clean",
-        "dev": "turbo run dev --concurrency=11 --no-cache  --continue",
+        "dev": "turbo run dev --concurrency=12 --no-cache  --continue",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
         "generate": "turbo run generate",
         "lint": "turbo run lint",

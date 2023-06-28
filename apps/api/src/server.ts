@@ -3,8 +3,8 @@ import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 import helmet from "helmet";
-import { inferAsyncReturnType, initTRPC } from '@trpc/server';
 import * as trpcExpress from '@trpc/server/adapters/express';
+import { appRouter, createContext } from '@w8nc/trpc'
 
 export const createServer = () => {
     const app = express();
@@ -14,13 +14,13 @@ export const createServer = () => {
         .use(urlencoded({ extended: true }))
         .use(json())
         .use(cors())
-        // .use(
-        //     "/trpc",
-        //     trpcExpress.createExpressMiddleware({
-        //         router: appRouter,
-        //         createContext,
-        //     })
-        // )
+        .use(
+            "/trpc",
+            trpcExpress.createExpressMiddleware({
+                router: appRouter,
+                createContext,
+            })
+        )
         .get("/message/:name", (req, res) => {
             return res.json({ message: `hello ${req.params.name}` });
         })
